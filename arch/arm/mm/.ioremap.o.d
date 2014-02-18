@@ -1,4 +1,4 @@
-flush.o: arch/arm/mm/flush.c \
+ioremap.o: arch/arm/mm/ioremap.c \
  /home/gnome/M40/kernel/sony/z1/include/linux/kconfig.h \
  include/generated/autoconf.h include/linux/module.h include/linux/list.h \
  include/linux/types.h \
@@ -117,15 +117,46 @@ flush.o: arch/arm/mm/flush.c \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/pgtable-2level.h \
  include/asm-generic/pgtable.h include/linux/page-flags.h \
  include/linux/huge_mm.h include/linux/vmstat.h \
- include/linux/vm_event_item.h include/linux/pagemap.h include/linux/fs.h \
- include/linux/limits.h include/linux/ioctl.h \
- arch/arm/include/generated/asm/ioctl.h include/asm-generic/ioctl.h \
- include/linux/blk_types.h include/linux/kdev_t.h include/linux/dcache.h \
- include/linux/rculist.h include/linux/rculist_bl.h \
+ include/linux/vm_event_item.h include/linux/vmalloc.h include/linux/io.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/io.h \
+ include/asm-generic/pci_iomap.h arch/arm/mach-msm/include/mach/msm_rtb.h \
+ arch/arm/mach-msm/include/mach/io.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cp15.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cputype.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cacheflush.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/glue-cache.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/shmparam.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cachetype.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/mmu_context.h \
+ include/linux/sched.h include/linux/capability.h \
+ arch/arm/include/generated/asm/cputime.h include/asm-generic/cputime.h \
+ include/linux/sem.h include/linux/ipc.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/ipcbuf.h \
+ include/asm-generic/ipcbuf.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/sembuf.h \
+ include/linux/signal.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/signal.h \
+ include/asm-generic/signal-defs.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/sigcontext.h \
+ arch/arm/include/generated/asm/siginfo.h include/asm-generic/siginfo.h \
+ include/linux/pid.h include/linux/proportions.h \
+ include/linux/percpu_counter.h include/linux/seccomp.h \
+ include/linux/rculist.h include/linux/rtmutex.h include/linux/plist.h \
+ include/linux/resource.h arch/arm/include/generated/asm/resource.h \
+ include/asm-generic/resource.h include/linux/hrtimer.h \
+ include/linux/timerqueue.h include/linux/task_io_accounting.h \
+ include/linux/latencytop.h include/linux/cred.h include/linux/key.h \
+ include/linux/selinux.h include/linux/llist.h include/linux/aio.h \
+ include/linux/aio_abi.h include/linux/uio.h \
+ include/asm-generic/mm_hooks.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/pgalloc.h \
+ include/linux/pagemap.h include/linux/fs.h include/linux/limits.h \
+ include/linux/ioctl.h arch/arm/include/generated/asm/ioctl.h \
+ include/asm-generic/ioctl.h include/linux/blk_types.h \
+ include/linux/kdev_t.h include/linux/dcache.h include/linux/rculist_bl.h \
  include/linux/list_bl.h include/linux/path.h include/linux/radix-tree.h \
- include/linux/pid.h include/linux/capability.h include/linux/semaphore.h \
- include/linux/fiemap.h include/linux/migrate_mode.h \
- include/linux/quota.h include/linux/percpu_counter.h \
+ include/linux/semaphore.h include/linux/fiemap.h \
+ include/linux/migrate_mode.h include/linux/quota.h \
  include/linux/dqblk_xfs.h include/linux/dqblk_v1.h \
  include/linux/dqblk_v2.h include/linux/dqblk_qtree.h \
  include/linux/nfs_fs_i.h include/linux/fcntl.h \
@@ -138,31 +169,10 @@ flush.o: arch/arm/mm/flush.c \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/hardirq.h \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/irq.h \
  include/linux/irq_cpustat.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cacheflush.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/glue-cache.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/shmparam.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cachetype.h \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/kmap_types.h \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/highmem.h \
  include/linux/hugetlb_inline.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/smp_plat.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/cputype.h \
  /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/tlbflush.h \
- include/linux/sched.h arch/arm/include/generated/asm/cputime.h \
- include/asm-generic/cputime.h include/linux/sem.h include/linux/ipc.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/ipcbuf.h \
- include/asm-generic/ipcbuf.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/sembuf.h \
- include/linux/signal.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/signal.h \
- include/asm-generic/signal-defs.h \
- /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/sigcontext.h \
- arch/arm/include/generated/asm/siginfo.h include/asm-generic/siginfo.h \
- include/linux/proportions.h include/linux/seccomp.h \
- include/linux/rtmutex.h include/linux/plist.h include/linux/resource.h \
- arch/arm/include/generated/asm/resource.h include/asm-generic/resource.h \
- include/linux/hrtimer.h include/linux/timerqueue.h \
- include/linux/task_io_accounting.h include/linux/latencytop.h \
- include/linux/cred.h include/linux/key.h include/linux/selinux.h \
- include/linux/llist.h include/linux/aio.h include/linux/aio_abi.h \
- include/linux/uio.h arch/arm/mm/mm.h
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/system_info.h \
+ /home/gnome/M40/kernel/sony/z1/arch/arm/include/asm/mach/map.h \
+ arch/arm/mm/mm.h
